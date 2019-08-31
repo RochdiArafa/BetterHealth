@@ -1,0 +1,324 @@
+<!doctype html>
+<html class="no-js" lang="en">
+{% block head %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+		============================================ -->
+    <link rel="icon" type="image/png" href="{{ asset('Front_office/images/icons/favicon.png')}}"/>
+    <!-- Google Fonts
+		============================================ -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/bootstrap.min.css')}}">
+    <!-- Bootstrap CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/font-awesome.min.css')}}">
+    <!-- owl.carousel CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/owl.theme.css')}}">
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/owl.transitions.css')}}">
+    <!-- animate CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/animate.css')}}">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/normalize.css')}}">
+    <!-- meanmenu icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/meanmenu.min.css')}}">
+    <!-- main CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/main.css')}}">
+    <!-- educate icon CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/educate-custon-icon.css')}}">
+    <!-- morrisjs CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/morrisjs/morris.css')}}">
+    <!-- mCustomScrollbar CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/scrollbar/jquery.mCustomScrollbar.min.css')}}">
+    <!-- metisMenu CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/metisMenu/metisMenu.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/metisMenu/metisMenu-vertical.css')}}">
+    <!-- calendar CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/calendar/fullcalendar.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/calendar/fullcalendar.print.min.css')}}">
+    <!-- style CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/style.css')}}">
+    <!-- responsive CSS
+		============================================ -->
+    <link rel="stylesheet" href="{{ asset('Admin_Dashboard/css/responsive.css')}}">
+    <!-- modernizr JS
+		============================================ -->
+    <script src="{{ asset('Admin_Dashboard/js/vendor/modernizr-2.8.3.min.js')}}"></script>
+</head>
+{% endblock %}
+<body>
+
+{% block header %}
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<!-- Start Left menu area -->
+<div class="left-sidebar-pro">
+    <nav id="sidebar" class="">
+        <div class="sidebar-header">
+            <br>
+            <a href="{{ path("dashboard_admin")}}"><img class="main-logo" src="{{ asset('Admin_Dashboard/img/logo/logo.png')}}" alt="" /></a> <br>
+            <strong><a href="{{ path("dashboard_admin")}}"><img src="{{ asset('Admin_Dashboard/img/logo/logosn.png')}}" alt="" /></a></strong>
+            <br>
+        </div>
+        <div class="left-custom-menu-adp-wrap comment-scrollbar">
+            <nav class="sidebar-nav left-sidebar-menu-pro">
+                <ul class="metismenu" id="menu1">
+                    <li>
+                        <a title="Landing Page" href="{{ path("dashboard_admin")}}" aria-expanded="false"><span class="" aria-hidden="true"></span> <span class="mini-click-non">Dashboard</span></a>
+                    </li>
+
+                    <li>
+                        <a title="Landing Page" href="{{ path("ecommerce_homepage")}}" aria-expanded="false"><span class="" aria-hidden="true"></span> <span class="mini-click-non">Shop</span></a>
+                    </li>
+
+                    <li>
+                        <a class="has-arrow" href="#" aria-expanded="false"><span class=""></span> <span class="mini-click-non">Produit</span></a>
+                        <ul class="submenu-angle" aria-expanded="false">
+                            <li><a title="All Professors" href="{{ path("Produit_list_dashboard")}}"><span class="mini-sub-pro">Afficher</span></a></li>
+                            <li><a title="Add Professor" href="{{ path("Produit_goajouter_dashboard")}}"><span class="mini-sub-pro">Ajouter</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="#" aria-expanded="false"><span class=""></span> <span class="mini-click-non">Categorie</span></a>
+                        <ul class="submenu-angle" aria-expanded="false">
+                            <li><a title="Afficher" href="{{ path("Categorie_list_dashboard")}}"><span class="mini-sub-pro">Afficher</span></a></li>
+                            <li><a title="Ajouter" href="{{ path("Categorie_goajouter_dashboard")}}"><span class="mini-sub-pro">Ajouter</span></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="#" aria-expanded="false"><span class=""></span> <span class="mini-click-non">Founisseur</span></a>
+                        <ul class="submenu-angle" aria-expanded="false">
+                            <li><a title="All Students" href="{{ path("Fournisseur_list_dashboard")}}"><span class="mini-sub-pro">Afficher</span></a></li>
+                            <li><a title="Add Students" href="{{ path("Fournisseur_goajouter_dashboard")}}"><span class="mini-sub-pro">Ajouter</span></a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a title="Landing Page" href="{{ path("Commande_list_dashboard")}}" aria-expanded="false"><span class="" aria-hidden="true"></span> <span class="mini-click-non">Commandes</span></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </nav>
+</div>
+<!-- End Left menu area -->
+
+
+<!-- Start Welcome area -->
+<div class="all-content-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="logo-pro">
+                    <a href="index.html"><img class="main-logo" src="{{ asset('Admin_Dashboard/img/logo/logo.png')}}" alt="" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-advance-area">
+        <div class="header-top-area">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="header-top-wraper">
+                            <div class="row">
+                                <div class="col-lg-1 col-md-0 col-sm-1 col-xs-12">
+                                    <div class="menu-switcher-pro">
+                                        <button type="button" id="sidebarCollapse" class="btn bar-button-pro header-drl-controller-btn btn-info navbar-btn">
+                                            <i class="educate-icon educate-nav"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-7 col-sm-6 col-xs-12">
+                                </div>
+                                <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                                    <div class="header-right-info">
+                                        <ul class="nav navbar-nav mai-top-nav header-right-menu">
+                                            <li class="nav-item">
+                                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><i class="educate-icon educate-bell" aria-hidden="true"></i>
+                                                    <span id="nbnotif" class="count" data-count="5"></span>
+                                                    <span class="indicator-ms"></span>
+                                                </a>
+                                                <div role="menu" class="notification-author dropdown-menu animated zoomIn">
+                                                    <div class="notification-single-top">
+                                                        <h1>Notifications</h1>
+                                                    </div>
+                                                    <ul class="notification-menu" id="ajax-results">
+                                                    </ul>
+                                                    <div class="notification-view">
+                                                        <a href="#">View All Notification</a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
+                                                    <img src=" {{ asset('image/user/'~user.avatar)}}" alt="" />
+                                                    <span class="admin-name">{{ user.nom }} {{ user.prenom }}</span>
+                                                    <i class="fa fa-angle-down edu-icon edu-down-arrow"></i>
+                                                </a>
+                                                <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
+                                                    <li><a href="{{ path('user_consulter')}}"><span class="edu-icon edu-home-admin author-log-ic"></span>My Account</a>
+                                                    </li>
+                                                    <li><a href="{{ path('user_goupdate')}}" ><span class="edu-icon edu-user-rounded author-log-ic"></span>Edit</a>
+                                                    </li>
+
+                                                    <li><a href="{{ path('fos_user_security_logout')}}"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br> <br><br>
+    {% block content %}
+    {% endblock %}
+    {% block footer %}
+
+    <div class="footer-copyright-area" >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-copy-right">
+                        <p>Copyright © 2018. All rights reserved. Template by <a href="https://colorlib.com/wp/templates/">Colorlib</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
+</div>
+
+{% endblock %}
+
+{% block script %}
+
+<!-- jquery
+    ============================================ -->
+<script src="{{ asset('Admin_Dashboard/js/vendor/jquery-1.12.4.min.js')}}"></script>
+<!-- bootstrap JS
+    ============================================ -->
+<script src="{{ asset('Admin_Dashboard/js/bootstrap.min.js')}}"></script>
+<!-- wow JS
+    ============================================ -->
+<script src="{{ asset('Admin_Dashboard/js/wow.min.js')}}"></script>
+<!-- price-slider JS
+    ============================================ -->
+<script src="{{ asset('Admin_Dashboard/js/jquery-price-slider.js')}}"></script>
+<!-- meanmenu JS
+    ============================================ -->
+<script src="{{ asset('Admin_Dashboard/js/jquery.meanmenu.js')}}"></script>
+<!-- owl.carousel JS
+    ============================================ -->
+<script src="{{ asset('Admin_Dashboard/js/owl.carousel.min.js')}}"></script>
+<!-- sticky JS
+    ============================================ -->
+<script src="{{ asset('Admin_Dashboard/js/jquery.sticky.js')}}"></script>
+<!-- scrollUp JS
+    ============================================ -->
+<script src="{{ asset('Admin_Dashboard/js/jquery.scrollUp.min.js')}}"></script>
+<!-- counterup JS
+    ============================================ -->
+<script src="{{ asset('Admin_Dashboard/js/counterup/jquery.counterup.min.js')}}"></script>
+<script src="{{ asset('Admin_Dashboard/js/counterup/waypoints.min.js')}}"></script>
+<script src="{{ asset('Admin_Dashboard/js/counterup/counterup-active.js')}}"></script>
+<!-- mCustomScrollbar JS
+    ============================================ -->
+<script src="{{ asset('Admin_Dashboard/js/scrollbar/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+<script src="{{ asset('Admin_Dashboard/js/scrollbar/mCustomScrollbar-active.js')}}"></script>
+<!-- metisMenu JS
+    ============================================ -->
+<script src="{{ asset('Admin_Dashboard/js/metisMenu/metisMenu.min.js')}}"></script>
+<script src="{{ asset('Admin_Dashboard/js/metisMenu/metisMenu-active.js')}}"></script>
+<!-- morrisjs JS
+    ============================================ -->
+<script src="{{ asset('Admin_Dashboard/js/morrisjs/raphael-min.js')}}"></script>
+<script src="{{ asset('Admin_Dashboard/js/morrisjs/morris.js')}}"></script>
+<script src="{{ asset('Admin_Dashboard/js/morrisjs/morris-active.js')}}"></script>
+<!-- morrisjs JS
+    ============================================ -->
+<script src="{{ asset('Admin_Dashboard/js/sparkline/jquery.sparkline.min.js')}}"></script>
+<script src="{{ asset('Admin_Dashboard/js/sparkline/jquery.charts-sparkline.js')}}"></script>
+<script src="{{ asset('Admin_Dashboard/js/sparkline/sparkline-active.js')}}"></script>
+<!-- calendar JS
+    ============================================ -->
+<script src="js/calendar/moment.min.js')}}"></script>
+<script src="js/calendar/fullcalendar.min.js')}}"></script>
+<script src="js/calendar/fullcalendar-active.js')}}"></script>
+<!-- plugins JS
+    ============================================ -->
+<script src="{{ asset('Admin_Dashboard/js/plugins.js')}}"></script>
+<!-- main JS
+    ============================================ -->
+<script src="{{ asset('Admin_Dashboard/js/main.js')}}"></script>
+<!-- tawk chat JS
+    ============================================ -->
+
+
+    <script src="{{ asset('jquery-3.4.1.min.js') }}"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            getNotifications();
+        });
+
+        function getNotifications() {
+
+            //call ajax
+            $.ajax({
+                url: '{{ (path('notification_user')) }}',
+                type: "POST",
+                dataType: "json",
+                data: {
+                    "some_var_name": "some_var_value"
+                },
+                async: true,
+                success: function (data) {
+                    console.log(data)
+                    $('#ajax-results').empty();
+                    //$('#nbnotif').data('count', data.count);
+                    $("#nbnotif").attr("data-count" , data.count);
+                    data.forEach(function (item) {
+                        console.log(item);
+                        $('#ajax-results').append("<li style='padding-left: 20px;'><div class='notification-content'><a href='dashboard/notification/supprimer?id="+item.id+"'> <span class='notification-date'>X</span></a><h2>"+item.title+"</h2><p>"+item.description+"</p></div></li>");
+                    });
+
+
+                }
+
+            });
+            setTimeout('getNotifications()', 5000);
+        }
+    </script>
+
+{% endblock %}
+</body>
+
+</html>

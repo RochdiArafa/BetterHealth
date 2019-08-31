@@ -1,0 +1,7 @@
+health_homepage:
+    path:     /
+    defaults: { _controller: HealthBundle:Default:index }
+
+accueilpage:
+    path:     /accueil
+    defaults: { _controller: HealthBundle:Default:home }
